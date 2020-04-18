@@ -14,4 +14,4 @@ cache:
 services:
   - mysql
 script:
-  - npm run migrate
+  - npm run migrate-travis

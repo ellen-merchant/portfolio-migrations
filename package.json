@@ -10,7 +10,8 @@
     "url": "https://github.com/ellllllen/portfolio-migrations"
   },
   "scripts": {
-    "migrate": "node node_modules/db-migrate/bin/db-migrate up -e APP_ENV"
+    "migrate": "node node_modules/db-migrate/bin/db-migrate up -e local",
+    "migrate-travis": "node node_modules/db-migrate/bin/db-migrate up -e travis"
   },
   "version": "0.0.0"
 }
