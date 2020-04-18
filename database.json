@@ -1,0 +1,27 @@
+{
+  "local": {
+    "driver": {
+      "ENV": "DB_CONNECTION"
+    },
+    "filename": {
+      "ENV": "DB_DATABASE"
+    }
+  },
+  "travis": {
+    "driver": {
+      "ENV": "DB_CONNECTION"
+    },
+    "host": {
+      "ENV": "DB_HOST"
+    },
+    "database": {
+      "ENV": "DB_DATABASE"
+    },
+    "user": {
+      "ENV": "DB_USERNAME"
+    },
+    "password": {
+      "ENV": "DB_PASSWORD"
+    }
+  }
+}

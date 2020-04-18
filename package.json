@@ -1,11 +1,20 @@
 {
   "dependencies": {
-    "db-migrate": "^0.11.10"
+    "db-migrate": "^0.11.10",
+    "db-migrate-mysql": "^2.1.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "db-migrate-sqlite3": "^0.4.0"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/ellllllen/portfolio-migrations"
+  },
+  "scripts": {
+    "migrate": "node node_modules/db-migrate/bin/db-migrate up -e local",
+    "migrate-travis": "node node_modules/db-migrate/bin/db-migrate up -e travis"
   },
   "version": "0.0.0"
 }
