@@ -1,8 +1,11 @@
 {
   "dependencies": {
     "db-migrate": "^0.11.10",
-    "db-migrate-sqlite3": "^0.4.0",
+    "db-migrate-mysql": "^2.1.1",
     "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "db-migrate-sqlite3": "^0.4.0"
   },
   "license": "MIT",
   "repository": {
