@@ -15,17 +15,15 @@ exports.setup = function (options, seedLink) {
 };
 
 exports.up = function (db) {
-    return db.createTable('articles', {
-        id: {type: 'int', primaryKey: true},
-        title: {type: 'string', unique: true},
-        section: {type: 'text'},
-        created_at: {type: 'timestamp', notNull: false},
-        updated_at: {type: 'timestamp', notNull: false},
-    });
+    return db.runSql(
+        "INSERT INTO tags (id, tag) VALUES (1, 'about me'), (2, 'project'), (3, 'notes');"
+    );
 };
 
 exports.down = function (db) {
-    return db.dropTable('articles');
+    return db.runSql(
+        "DELETE FROM tags WHERE id IN (1, 2, 3);"
+    );
 };
 
 exports._meta = {

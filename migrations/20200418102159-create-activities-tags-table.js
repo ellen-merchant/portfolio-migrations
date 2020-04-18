@@ -16,15 +16,13 @@ exports.setup = function (options, seedLink) {
 
 exports.up = function (db) {
     return db.createTable('activities', {
-        id: {type: 'int', primaryKey: true, autoIncrement: true},
+        id: {type: 'int', primaryKey: true},
         title: 'string',
         description: 'string',
         start_date: 'timestamp',
         title_link: 'string',
         display: 'boolean',
-        external: 'boolean',
-        created_at: {type: 'timestamp', notNull: false},
-        updated_at: {type: 'timestamp', notNull: false},
+        external: 'boolean'
     });
 };
 

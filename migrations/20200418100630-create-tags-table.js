@@ -16,10 +16,8 @@ exports.setup = function(options, seedLink) {
 
 exports.up = function(db) {
   return db.createTable('tags', {
-    id: {type: 'int', primaryKey: true, autoIncrement: true},
-    tag: 'string',
-    created_at: {type: 'timestamp', notNull: false},
-    updated_at: {type: 'timestamp', notNull: false},
+    id: {type: 'int', primaryKey: true},
+    tag: 'string'
   });
 };
 

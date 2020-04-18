@@ -16,7 +16,6 @@ exports.setup = function (options, seedLink) {
 
 exports.up = function (db) {
     return db.createTable('article_tags', {
-        id: {type: 'int', primaryKey: true, autoIncrement: true},
         article_id: {
             type: 'int', foreignKey: {
                 name: 'article_tags_article_id_fk',
