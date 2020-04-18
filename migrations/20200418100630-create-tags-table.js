@@ -19,7 +19,7 @@ exports.up = function(db) {
     id: {type: 'int', primaryKey: true, autoIncrement: true},
     tag: 'string',
     created_at: 'timestamp',
-    updated_at: 'timestamp',
+    updated_at: {type: 'timestamp', notNull: false},
   });
 };
 

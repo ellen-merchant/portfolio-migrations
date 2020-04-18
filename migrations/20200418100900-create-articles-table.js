@@ -21,7 +21,7 @@ exports.up = function (db) {
         section: {type: 'text'},
         image: 'text',
         created_at: 'timestamp',
-        updated_at: 'timestamp',
+        updated_at: {type: 'timestamp', notNull: false},
     });
 };
 

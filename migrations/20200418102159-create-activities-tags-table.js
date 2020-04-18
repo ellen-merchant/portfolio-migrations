@@ -24,7 +24,7 @@ exports.up = function (db) {
         display: 'boolean',
         external: 'boolean',
         created_at: 'timestamp',
-        updated_at: 'timestamp',
+        updated_at: {type: 'timestamp', notNull: false},
     });
 };
 
