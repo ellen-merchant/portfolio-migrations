@@ -1,7 +1,13 @@
 language: node_js
+node_js:
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
 install:
   - cp .env.travis .env
-  - npm install
+  - npm install --production
 cache:
   directories:
     - node_modules
