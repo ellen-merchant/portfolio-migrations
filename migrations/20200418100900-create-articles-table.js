@@ -20,7 +20,7 @@ exports.up = function (db) {
         title: {type: 'string', unique: true},
         section: {type: 'text'},
         image: 'text',
-        created_at: 'timestamp',
+        created_at: {type: 'timestamp', notNull: false},
         updated_at: {type: 'timestamp', notNull: false},
     });
 };

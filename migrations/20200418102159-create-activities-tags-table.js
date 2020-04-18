@@ -23,7 +23,7 @@ exports.up = function (db) {
         title_link: 'string',
         display: 'boolean',
         external: 'boolean',
-        created_at: 'timestamp',
+        created_at: {type: 'timestamp', notNull: false},
         updated_at: {type: 'timestamp', notNull: false},
     });
 };
