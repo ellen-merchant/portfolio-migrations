@@ -1,11 +1,16 @@
 {
   "dependencies": {
-    "db-migrate": "^0.11.10"
+    "db-migrate": "^0.11.10",
+    "db-migrate-sqlite3": "^0.4.0",
+    "dotenv": "^8.2.0"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/ellllllen/portfolio-migrations"
+  },
+  "scripts": {
+    "migrate": "node node_modules/db-migrate/bin/db-migrate up -e APP_ENV"
   },
   "version": "0.0.0"
 }

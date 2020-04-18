@@ -1,6 +1,11 @@
 language: node_js
-before_script:
-  - npm install
+install:
+  - cp .env.travis .env
+  - travis_retry composer install --no-interaction --prefer-dist --no-suggest
 cache:
   directories:
     - node_modules
+services:
+  - mysql
+script:
+  - npm run migrate
