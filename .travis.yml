@@ -1,7 +1,7 @@
 language: node_js
 install:
   - cp .env.travis .env
-  - travis_retry composer install --no-interaction --prefer-dist --no-suggest
+  - npm install
 cache:
   directories:
     - node_modules
