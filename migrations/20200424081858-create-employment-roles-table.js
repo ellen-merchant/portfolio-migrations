@@ -29,7 +29,7 @@ exports.up = function (db) {
         },
         title: 'string',
         start_date: 'timestamp',
-        finish_date: 'timestamp',
+        end_date: 'timestamp',
     });
 };
 
