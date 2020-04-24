@@ -24,6 +24,7 @@ exports.up = function(db) {
       "(5, 'Combe Martin Wildlife Park', 'Combe Martin, Devon', 'While still in full time education I worked as a shop assistant. The skills I gained working within this role was time management, communication, money handling, customer service and team work.');"
   );
 };
+
 exports.down = function(db) {
   return db.runSql(
       "DELETE FROM employment WHERE id IN (1, 2, 3, 4, 5);"
