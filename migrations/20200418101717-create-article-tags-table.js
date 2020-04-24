@@ -26,14 +26,16 @@ exports.up = function (db) {
                 mapping: 'id'
             }
         },
-        tag_id: {type: 'int', foreignKey: {
+        tag_id: {
+            type: 'int', foreignKey: {
                 name: 'article_tags_tag_id_fk',
                 table: 'tags',
                 rules: {
                     onDelete: 'CASCADE'
                 },
                 mapping: 'id'
-            }}
+            }
+        }
     });
 };
 

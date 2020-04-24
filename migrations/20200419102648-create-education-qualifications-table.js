@@ -5,37 +5,37 @@ var type;
 var seed;
 
 /**
-  * We receive the dbmigrate dependency from dbmigrate initially.
-  * This enables us to not have to rely on NODE_PATH.
-  */
-exports.setup = function(options, seedLink) {
-  dbm = options.dbmigrate;
-  type = dbm.dataType;
-  seed = seedLink;
+ * We receive the dbmigrate dependency from dbmigrate initially.
+ * This enables us to not have to rely on NODE_PATH.
+ */
+exports.setup = function (options, seedLink) {
+    dbm = options.dbmigrate;
+    type = dbm.dataType;
+    seed = seedLink;
 };
 
-exports.up = function(db) {
-  return db.createTable('education_qualifications', {
-    id: {type: 'int', primaryKey: true, autoIncrement: true},
-    education_id: {
-      type: 'int', foreignKey: {
-        name: 'education_qualifications_education_id_fk',
-        table: 'education',
-        rules: {
-          onDelete: 'CASCADE'
+exports.up = function (db) {
+    return db.createTable('education_qualifications', {
+        id: {type: 'int', primaryKey: true, autoIncrement: true},
+        education_id: {
+            type: 'int', foreignKey: {
+                name: 'education_qualifications_education_id_fk',
+                table: 'education',
+                rules: {
+                    onDelete: 'CASCADE'
+                },
+                mapping: 'id'
+            }
         },
-        mapping: 'id'
-      }
-    },
-    name: 'string',
-    content: 'text'
-  });
+        name: 'string',
+        content: 'text'
+    });
 };
 
-exports.down = function(db) {
-  return db.dropTable('education_qualifications');
+exports.down = function (db) {
+    return db.dropTable('education_qualifications');
 };
 
 exports._meta = {
-  "version": 1
+    "version": 1
 };
