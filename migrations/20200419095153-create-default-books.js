@@ -15,14 +15,15 @@ exports.setup = function (options, seedLink) {
 };
 
 exports.up = function (db) {
-    return db.createTable('tags', {
-        id: {type: 'int', primaryKey: true},
-        tag: 'string'
-    });
+    return db.runSql(
+        "INSERT INTO books (id, title) VALUES(1, 'Pandy Goes Home'), (2, 'Evie''s Book of Unusual Animals');"
+    );
 };
 
 exports.down = function (db) {
-    return db.dropTable('tags');
+    return db.runSql(
+        "DELETE FROM books WHERE id IN (1, 2);"
+    );
 };
 
 exports._meta = {

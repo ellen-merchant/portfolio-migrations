@@ -15,32 +15,24 @@ exports.setup = function (options, seedLink) {
 };
 
 exports.up = function (db) {
-    return db.createTable('article_tags', {
-        article_id: {
+    return db.createTable('book_images', {
+        id: {type: 'int', primaryKey: true, autoIncrement: true},
+        book_id: {
             type: 'int', foreignKey: {
-                name: 'article_tags_article_id_fk',
-                table: 'articles',
+                name: 'book_images_book_id_fk',
+                table: 'books',
                 rules: {
                     onDelete: 'CASCADE'
                 },
                 mapping: 'id'
             }
         },
-        tag_id: {
-            type: 'int', foreignKey: {
-                name: 'article_tags_tag_id_fk',
-                table: 'tags',
-                rules: {
-                    onDelete: 'CASCADE'
-                },
-                mapping: 'id'
-            }
-        }
+        src: 'string'
     });
 };
 
 exports.down = function (db) {
-    return db.dropTable('article_tags');
+    return db.dropTable('book_images');
 };
 
 exports._meta = {

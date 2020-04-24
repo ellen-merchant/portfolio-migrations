@@ -15,14 +15,15 @@ exports.setup = function (options, seedLink) {
 };
 
 exports.up = function (db) {
-    return db.createTable('tags', {
-        id: {type: 'int', primaryKey: true},
-        tag: 'string'
+    return db.createTable('skills', {
+        id: {type: 'int', primaryKey: true, autoIncrement: true},
+        start_date: 'date',
+        description: 'string'
     });
 };
 
 exports.down = function (db) {
-    return db.dropTable('tags');
+    return db.dropTable('skills');
 };
 
 exports._meta = {

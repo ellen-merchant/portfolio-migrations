@@ -15,14 +15,15 @@ exports.setup = function (options, seedLink) {
 };
 
 exports.up = function (db) {
-    return db.createTable('tags', {
-        id: {type: 'int', primaryKey: true},
-        tag: 'string'
-    });
+    return db.runSql(
+        "INSERT INTO education (id, name, location) VALUES(1, 'Bournemouth University', 'Bournemouth, Dorset'), (2, 'Ilfracombe College', 'Ilfracombe, Devon');"
+    );
 };
 
 exports.down = function (db) {
-    return db.dropTable('tags');
+    return db.runSql(
+        "DELETE FROM education WHERE id IN (1, 2);"
+    );
 };
 
 exports._meta = {

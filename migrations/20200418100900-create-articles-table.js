@@ -16,10 +16,9 @@ exports.setup = function (options, seedLink) {
 
 exports.up = function (db) {
     return db.createTable('articles', {
-        id: {type: 'int', primaryKey: true, autoIncrement: true},
+        id: {type: 'int', primaryKey: true},
         title: {type: 'string', unique: true},
-        section: {type: 'text'},
-        image: 'text',
+        section: {type: 'text', length: 65537},
         created_at: {type: 'timestamp', notNull: false},
         updated_at: {type: 'timestamp', notNull: false},
     });

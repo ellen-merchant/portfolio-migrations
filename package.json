@@ -13,7 +13,8 @@
     "url": "https://github.com/ellllllen/portfolio-migrations"
   },
   "scripts": {
-    "migrate": "node node_modules/db-migrate/bin/db-migrate up -e local",
+    "migrate": "node node_modules/db-migrate/bin/db-migrate up",
+    "rollback": "node node_modules/db-migrate/bin/db-migrate down",
     "migrate-travis": "node node_modules/db-migrate/bin/db-migrate up -e travis"
   },
   "version": "0.0.0"

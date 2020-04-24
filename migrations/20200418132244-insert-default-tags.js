@@ -15,14 +15,15 @@ exports.setup = function (options, seedLink) {
 };
 
 exports.up = function (db) {
-    return db.createTable('tags', {
-        id: {type: 'int', primaryKey: true},
-        tag: 'string'
-    });
+    return db.runSql(
+        "INSERT INTO tags (id, tag) VALUES (1, 'about me'), (2, 'project'), (3, 'notes');"
+    );
 };
 
 exports.down = function (db) {
-    return db.dropTable('tags');
+    return db.runSql(
+        "DELETE FROM tags WHERE id IN (1, 2, 3);"
+    );
 };
 
 exports._meta = {
