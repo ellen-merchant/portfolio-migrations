@@ -23,5 +23,8 @@
     "password": {
       "ENV": "DB_PASSWORD"
     }
+  },
+  "production": {
+    "ENV": "DATABASE_URL"
   }
 }
