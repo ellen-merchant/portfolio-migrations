@@ -17,7 +17,7 @@ exports.setup = function (options, seedLink) {
 exports.up = function (db) {
     return db.createTable('skills', {
         id: {type: 'int', primaryKey: true, autoIncrement: true},
-        start_date: 'timestamp',
+        start_date: 'date',
         description: 'string'
     });
 };

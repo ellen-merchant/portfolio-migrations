@@ -19,7 +19,7 @@ exports.up = function (db) {
         id: {type: 'int', primaryKey: true},
         title: 'string',
         description: 'string',
-        start_date: 'timestamp',
+        start_date: 'date',
         title_link: 'string',
         display: 'boolean',
         external: 'boolean'

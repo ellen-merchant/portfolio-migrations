@@ -17,9 +17,9 @@ exports.setup = function (options, seedLink) {
 exports.up = function (db) {
     return db.runSql(
         "INSERT INTO skills (start_date, description) VALUES" +
-        "('2008-08-01 00:00:00', 'PHP 5/PHP 7, MySQL, HTML, CSS/SaSS')," +
-        "('2010-06-01 00:00:00', 'Linux/LAMP Stack, JavaScript/JQuery/VueJS')," +
-        "('2015-01-01 00:00:00', 'Laravel, Git, PHPUnit');"
+        "('2008-08-01', 'PHP 5/PHP 7, MySQL, HTML, CSS/SaSS')," +
+        "('2010-06-01', 'Linux/LAMP Stack, JavaScript/JQuery/VueJS')," +
+        "('2015-01-01', 'Laravel, Git, PHPUnit');"
     );
 };
 
