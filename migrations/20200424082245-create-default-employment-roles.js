@@ -17,7 +17,7 @@ exports.setup = function (options, seedLink) {
 exports.up = function (db) {
     return db.runSql(
         "INSERT INTO employment_roles (employment_id, title, start_date, end_date) VALUES" +
-        "(1, 'Software Developer - Web Services', '2018-09-01 00:00:00', null)," +
+        "(1, 'Software Developer - Web Services', '2018-09-01 00:00:00', '')," +
         "(2, 'Software Team Lead', '2018-03-01 00:00:00', '2018-09-01 00:00:00')," +
         "(2, 'Business Continuity Manager', '2017-06-01 00:00:00', '2018-09-01 00:00:00')," +
         "(2, 'Developer', '2010-06-01 00:00:00', '2018-03-01 00:00:00')," +
