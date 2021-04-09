@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ellllllen/portfolio-migrations"
+    "url": "https://github.com/slipperthepanda/portfolio-migrations"
   },
   "scripts": {
     "migrate": "node node_modules/db-migrate/bin/db-migrate up",
